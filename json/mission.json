@@ -1,18 +1,12 @@
 {
   "mission_id": "ARRAY001",
   "title": "Find Maximum Number",
-  "difficulty": "easy",
-  "time_limit": 120,
-  "points": 100,
   "description": "Find the largest number in the array",
+  "difficulty": "easy",
+  "time_limit": 30,
+  "points": 100,
   "test_cases": [
-    {
-      "input": [3,7,2,9],
-      "output": 9
-    },
-    {
-      "input": [5,1,8,4],
-      "output": 8
-    }
+    { "input": [3,7,2,9], "output": 9 },
+    { "input": [5,1,8,4], "output": 8 }
   ]
 }
