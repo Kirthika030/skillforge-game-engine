@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillForge - Job Readiness</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#131313",
+                        "on-secondary": "#533a00",
+                        "on-primary-fixed": "#004627",
+                        "inverse-on-surface": "#565555",
+                        "surface": "#0e0e0e",
+                        "error-dim": "#d7383b",
+                        "secondary": "#feb700",
+                        "on-error": "#490006",
+                        "outline": "#767575",
+                        "on-background": "#ffffff",
+                        "outline-variant": "#484847",
+                        "on-secondary-fixed": "#463000",
+                        "tertiary-container": "#fd3164",
+                        "surface-bright": "#2c2c2c",
+                        "on-primary-fixed-variant": "#00653b",
+                        "on-surface": "#ffffff",
+                        "secondary-container": "#7c5800",
+                        "primary-container": "#00fc9a",
+                        "on-primary": "#00643a",
+                        "on-error-container": "#ffa8a3",
+                        "primary": "#a1ffc2",
+                        "inverse-primary": "#006d40",
+                        "inverse-surface": "#fcf9f8",
+                        "secondary-dim": "#ecaa00",
+                        "on-tertiary": "#480014",
+                        "surface-container-highest": "#262626",
+                        "secondary-fixed-dim": "#feb700",
+                        "on-tertiary-container": "#000000",
+                        "tertiary-fixed-dim": "#ff788c",
+                        "on-tertiary-fixed": "#39000e",
+                        "error-container": "#9f0519",
+                        "tertiary-dim": "#e31754",
+                        "on-tertiary-fixed-variant": "#780027",
+                        "primary-dim": "#00ec90",
+                        "on-surface-variant": "#adaaaa",
+                        "surface-container": "#1a1a1a",
+                        "primary-fixed": "#00fc9a",
+                        "error": "#ff716c",
+                        "on-secondary-container": "#fff6ee",
+                        "background": "#0e0e0e",
+                        "surface-tint": "#a1ffc2",
+                        "on-secondary-fixed-variant": "#6b4b00",
+                        "on-primary-container": "#005b34",
+                        "surface-container-lowest": "#000000",
+                        "tertiary-fixed": "#ff909e",
+                        "surface-dim": "#0e0e0e",
+                        "primary-fixed-dim": "#00ec90",
+                        "surface-variant": "#262626",
+                        "tertiary": "#ff6e85",
+                        "secondary-fixed": "#ffc965",
+                        "surface-container-high": "#20201f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0e0e0e;
+            color: #ffffff;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(38, 38, 38, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .difficulty-pill {
+            background-color: #262626;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface pb-24">
+<!-- TopAppBar -->
+<header class="bg-zinc-950 text-[#00FF9C] fixed top-0 w-full z-50 border-b border-zinc-800/50 flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#00FF9C] cursor-pointer">menu</span>
+<h1 class="text-2xl font-bold text-[#00FF9C] tracking-tighter font-['Space_Grotesk']">SkillForge</h1>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-zinc-800">
+<img alt="User Profile" data-alt="close-up portrait of a professional software engineer in soft studio lighting with a neutral gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc-Et8l2mb06AkWv9jp8vIhZMfidYiEjZVAOhLFMZ72bkV1gxzsPf046h_a_pyHk0x1QBXt-0e5b6oZ-hH8Axdbs5y_swWI-HTO2oiB2OFN4HphQVKmNDmqurxpnJIKBhCifFyka-rJ6Ths_ihZpGEujtGnqMZ-W559A9IizNKDhWHyOxa3X8SvgeY_sOl64JniigtBj6Poy-aAsuo1xLTm2PeISVyrkCWEs9QLvUkjyhprxmCF-jSPAM5Wvzpfjg14gaehdvzurc"/>
+</div>
+</header>
+<main class="mt-20 px-6 max-w-4xl mx-auto">
+<!-- Header Section -->
+<section class="mb-8">
+<h2 class="font-headline text-4xl font-bold tracking-tight text-on-surface mb-2">Job Readiness</h2>
+<p class="text-on-surface-variant font-body text-base leading-relaxed">
+                Prepare for technical interviews through structured coding practice missions.
+            </p>
+</section>
+<!-- Mock Interview Hero (Glassmorphism Card) -->
+<section class="mb-10">
+<div class="relative overflow-hidden rounded-xl bg-surface-container border-l-4 border-primary-container p-6">
+<div class="absolute top-0 right-0 -mt-8 -mr-8 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">videocam</span>
+<span class="text-primary-container font-label text-xs font-bold uppercase tracking-widest">Premium Mode</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-2">Mock Interview Mode</h3>
+<p class="text-on-surface-variant text-sm mb-6 max-w-md">
+                        Simulate real technical interviews with AI-powered feedback and time pressure. Experience the heat of the forge.
+                    </p>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-label font-bold text-sm px-6 py-3 rounded-xl transition-transform active:scale-95">
+                        START MOCK INTERVIEW
+                    </button>
+</div>
+</div>
+</section>
+<!-- Skill Progress (Asymmetric Bento-like Layout) -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-4">
+<h4 class="font-headline text-xl font-bold uppercase tracking-wider text-primary">Mission Status</h4>
+<span class="font-headline text-primary font-bold">72%</span>
+</div>
+<div class="grid grid-cols-3 gap-3 mb-4">
+<!-- Easy -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col border-l-2 border-primary">
+<span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-tighter mb-1">Easy</span>
+<span class="font-headline text-2xl font-bold text-on-surface">24/30</span>
+</div>
+<!-- Medium -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col border-l-2 border-secondary">
+<span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-tighter mb-1">Medium</span>
+<span class="font-headline text-2xl font-bold text-on-surface">12/45</span>
+</div>
+<!-- Hard -->
+<div class="bg-surface-container-low p-4 rounded-xl flex flex-col border-l-2 border-tertiary">
+<span class="text-on-surface-variant text-[10px] font-bold uppercase tracking-tighter mb-1">Hard</span>
+<span class="font-headline text-2xl font-bold text-on-surface">03/15</span>
+</div>
+</div>
+<!-- Visual Progress Bar -->
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[72%]"></div>
+</div>
+</section>
+<!-- Interview Preparation Modules (Horizontal Scrollable) -->
+<section class="mb-6">
+<h4 class="font-headline text-xl font-bold mb-4 flex items-center gap-2">
+                Preparation Modules
+                <span class="bg-surface-container-highest text-[10px] px-2 py-0.5 rounded text-on-surface-variant uppercase font-bold">5 Available</span>
+</h4>
+<div class="flex overflow-x-auto gap-4 pb-4 custom-scrollbar">
+<!-- Card: Arrays -->
+<div class="min-w-[260px] bg-surface-container rounded-xl p-5 flex flex-col transition-all hover:bg-surface-container-high border-b-4 border-primary/20">
+<div class="flex justify-between items-start mb-4">
+<div class="difficulty-pill px-3 py-1 rounded-md border-l-2 border-primary">
+<span class="text-primary text-[10px] font-bold uppercase">Easy</span>
+</div>
+<span class="text-on-surface-variant text-xs font-medium">12 Missions</span>
+</div>
+<h5 class="font-headline text-lg font-bold mb-1">Arrays</h5>
+<p class="text-on-surface-variant text-xs mb-6 flex-grow">Master manipulation, slicing, and sorting algorithms.</p>
+<button class="w-full py-2 bg-surface-container-highest text-primary font-bold text-xs rounded-lg uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors">
+                        Start Practice
+                    </button>
+</div>
+<!-- Card: Strings -->
+<div class="min-w-[260px] bg-surface-container rounded-xl p-5 flex flex-col transition-all hover:bg-surface-container-high border-b-4 border-secondary/20">
+<div class="flex justify-between items-start mb-4">
+<div class="difficulty-pill px-3 py-1 rounded-md border-l-2 border-secondary">
+<span class="text-secondary text-[10px] font-bold uppercase">Medium</span>
+</div>
+<span class="text-on-surface-variant text-xs font-medium">8 Missions</span>
+</div>
+<h5 class="font-headline text-lg font-bold mb-1">Strings</h5>
+<p class="text-on-surface-variant text-xs mb-6 flex-grow">Parsing, regex patterns, and efficiency challenges.</p>
+<button class="w-full py-2 bg-surface-container-highest text-primary font-bold text-xs rounded-lg uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors">
+                        Start Practice
+                    </button>
+</div>
+<!-- Card: Loops and Logic -->
+<div class="min-w-[260px] bg-surface-container rounded-xl p-5 flex flex-col transition-all hover:bg-surface-container-high border-b-4 border-tertiary/20">
+<div class="flex justify-between items-start mb-4">
+<div class="difficulty-pill px-3 py-1 rounded-md border-l-2 border-tertiary">
+<span class="text-tertiary text-[10px] font-bold uppercase">Hard</span>
+</div>
+<span class="text-on-surface-variant text-xs font-medium">15 Missions</span>
+</div>
+<h5 class="font-headline text-lg font-bold mb-1">Loops &amp; Logic</h5>
+<p class="text-on-surface-variant text-xs mb-6 flex-grow">Complex iterations and recursive logic structures.</p>
+<button class="w-full py-2 bg-surface-container-highest text-primary font-bold text-xs rounded-lg uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors">
+                        Start Practice
+                    </button>
+</div>
+<!-- Card: Algorithms -->
+<div class="min-w-[260px] bg-surface-container rounded-xl p-5 flex flex-col transition-all hover:bg-surface-container-high border-b-4 border-primary/20">
+<div class="flex justify-between items-start mb-4">
+<div class="difficulty-pill px-3 py-1 rounded-md border-l-2 border-primary">
+<span class="text-primary text-[10px] font-bold uppercase">Mixed</span>
+</div>
+<span class="text-on-surface-variant text-xs font-medium">20 Missions</span>
+</div>
+<h5 class="font-headline text-lg font-bold mb-1">Basic Algorithms</h5>
+<p class="text-on-surface-variant text-xs mb-6 flex-grow">Searching, sorting, and fundamental problem-solving.</p>
+<button class="w-full py-2 bg-surface-container-highest text-primary font-bold text-xs rounded-lg uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-colors">
+                        Start Practice
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full h-20 bg-zinc-950/95 backdrop-blur-md flex justify-around items-center px-4 pb-safe z-50 border-t border-zinc-800/50 shadow-[0_-4px_20px_rgba(0,0,0,0.4)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-300 active:scale-90 duration-100 cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">home</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-tighter font-bold">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-300 active:scale-90 duration-100 cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">rocket_launch</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-tighter font-bold">Missions</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#00FF9C] bg-[#00FF9C]/10 rounded-xl px-3 py-1 active:scale-90 duration-100 cursor-pointer">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-tighter font-bold">Ready</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-300 active:scale-90 duration-100 cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">swords</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-tighter font-bold">Social</span>
+</div>
+<div class="flex flex-col items-center justify-center text-zinc-500 hover:text-zinc-300 active:scale-90 duration-100 cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">insights</span>
+<span class="font-['Inter'] text-[10px] uppercase tracking-tighter font-bold">Stats</span>
+</div>
+</nav>
+</body></html>
