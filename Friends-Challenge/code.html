@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkillForge | Challenge Friends</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#fff6ee",
+                      "primary": "#a1ffc2",
+                      "on-tertiary-container": "#000000",
+                      "primary-container": "#00fc9a",
+                      "tertiary": "#ff6e85",
+                      "secondary-container": "#7c5800",
+                      "on-tertiary-fixed": "#39000e",
+                      "inverse-on-surface": "#565555",
+                      "on-secondary-fixed": "#463000",
+                      "primary-fixed-dim": "#00ec90",
+                      "on-surface-variant": "#adaaaa",
+                      "outline": "#767575",
+                      "error-container": "#9f0519",
+                      "tertiary-dim": "#e31754",
+                      "surface-container-low": "#131313",
+                      "error-dim": "#d7383b",
+                      "on-primary-container": "#005b34",
+                      "error": "#ff716c",
+                      "on-surface": "#ffffff",
+                      "outline-variant": "#484847",
+                      "surface-variant": "#262626",
+                      "on-primary": "#00643a",
+                      "primary-dim": "#00ec90",
+                      "on-tertiary": "#480014",
+                      "inverse-primary": "#006d40",
+                      "on-background": "#ffffff",
+                      "secondary-fixed": "#ffc965",
+                      "surface-dim": "#0e0e0e",
+                      "inverse-surface": "#fcf9f8",
+                      "surface-container": "#1a1a1a",
+                      "on-secondary": "#533a00",
+                      "surface-container-lowest": "#000000",
+                      "surface-container-high": "#20201f",
+                      "secondary-fixed-dim": "#feb700",
+                      "on-error": "#490006",
+                      "on-error-container": "#ffa8a3",
+                      "primary-fixed": "#00fc9a",
+                      "surface-tint": "#a1ffc2",
+                      "tertiary-container": "#fd3164",
+                      "secondary": "#feb700",
+                      "on-secondary-fixed-variant": "#6b4b00",
+                      "on-primary-fixed-variant": "#00653b",
+                      "tertiary-fixed-dim": "#ff788c",
+                      "on-tertiary-fixed-variant": "#780027",
+                      "surface": "#0e0e0e",
+                      "surface-bright": "#2c2c2c",
+                      "secondary-dim": "#ecaa00",
+                      "surface-container-highest": "#262626",
+                      "on-primary-fixed": "#004627",
+                      "tertiary-fixed": "#ff909e",
+                      "background": "#0e0e0e"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "label": ["Manrope"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-24 md:pb-0 md:pl-72">
+<!-- Top Navigation Anchor -->
+<nav class="bg-[#131313] dark:bg-[#131313] font-['Space_Grotesk'] font-bold tracking-tight docked full-width top-0 sticky z-50 border-b border-[#484847]/15 flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#00FF9C]">menu</span>
+<span class="text-2xl font-black text-[#00FF9C] tracking-tighter uppercase">SkillForge</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex gap-8 mr-8">
+<a class="text-slate-400 hover:bg-[#20201f] transition-colors duration-200 px-2 py-1 rounded" href="#">Home</a>
+<a class="text-slate-400 hover:bg-[#20201f] transition-colors duration-200 px-2 py-1 rounded" href="#">Missions</a>
+<a class="text-[#00FF9C] hover:bg-[#20201f] transition-colors duration-200 px-2 py-1 rounded" href="#">Challenge Friends</a>
+</div>
+<img alt="Profile" class="w-10 h-10 rounded-full border border-[#00FF9C]/20" data-alt="close-up portrait of a tech-savvy user avatar with neon lighting highlights on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcz1dPGvbZRGWu7lfpWPpklEhNWMjuZVrckx7CBzoBPLmznmOOCzXuP5Z6vMmy8TThevU6SIKXIRZH8eSYK1bVQ27Ft1br0-sj1kycrpRTF4rtkGal9U60vsHjpZjHzJkQjKYKaVOnM5-hWyIRcRW5LkkVaxUExzSadAdj_imJhCkiO8FNGsHP3NogGqe2QK1-BXCZQKIc88D6QRulV1jTaIm8wZ3yzuBmMD_AFEg6IaELvRfNjWrm6Ehtr0V6pRyNPUvf52AkCE4"/>
+</div>
+</nav>
+<!-- Sidebar Navigation -->
+<aside class="fixed inset-y-0 left-0 z-50 flex flex-col h-full w-72 rounded-r-lg bg-[#131313] dark:bg-[#131313] shadow-2xl shadow-black/50 hidden md:flex">
+<div class="p-6">
+<span class="text-xl font-bold text-[#00FF9C]">THE FORGE</span>
+</div>
+<div class="flex flex-col gap-1 mt-4">
+<a class="font-['Space_Grotesk'] text-sm font-semibold uppercase tracking-widest text-slate-500 px-4 py-3 hover:bg-[#20201f] hover:text-white transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">home</span> Home
+            </a>
+<a class="font-['Space_Grotesk'] text-sm font-semibold uppercase tracking-widest text-slate-500 px-4 py-3 hover:bg-[#20201f] hover:text-white transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">rocket_launch</span> Missions
+            </a>
+<a class="font-['Space_Grotesk'] text-sm font-semibold uppercase tracking-widest text-[#00FF9C] bg-[#1a1a1a] border-l-4 border-[#00FF9C] px-4 py-3 transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">groups</span> Challenge Friends
+            </a>
+<a class="font-['Space_Grotesk'] text-sm font-semibold uppercase tracking-widest text-slate-500 px-4 py-3 hover:bg-[#20201f] hover:text-white transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">work</span> Job Readiness
+            </a>
+<a class="font-['Space_Grotesk'] text-sm font-semibold uppercase tracking-widest text-slate-500 px-4 py-3 hover:bg-[#20201f] hover:text-white transition-all flex items-center gap-4" href="#">
+<span class="material-symbols-outlined">leaderboard</span> Progress
+            </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="max-w-4xl mx-auto p-6 space-y-8 mt-4">
+<!-- Page Header -->
+<header class="space-y-2">
+<h1 class="text-4xl md:text-5xl font-black tracking-tighter text-on-surface uppercase">Challenge Friends</h1>
+<p class="text-on-surface-variant font-body text-lg">Compete with friends and improve coding skills together.</p>
+</header>
+<!-- Bento Grid / Stacked Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Section 1: Create Challenge -->
+<section class="bg-surface-container rounded-xl p-6 border-l-2 border-primary/20 hover:bg-surface-container-high transition-colors">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">add_circle</span>
+<h2 class="text-xl font-bold uppercase tracking-tight">Create Challenge</h2>
+</div>
+<div class="space-y-4">
+<div class="space-y-1">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Room Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-primary text-on-surface placeholder:text-outline-variant p-3" placeholder="e.g. Algo Warriors" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Difficulty</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-primary text-on-surface p-3 appearance-none">
+<option>Easy</option>
+<option selected="">Medium</option>
+<option>Hard</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Questions</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-primary text-on-surface p-3 appearance-none">
+<option>3</option>
+<option selected="">5</option>
+<option>10</option>
+</select>
+</div>
+</div>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-headline font-bold py-4 rounded-xl uppercase tracking-widest active:scale-95 transition-transform">
+                        Create Room
+                    </button>
+</div>
+</section>
+<!-- Section 2: Join Challenge -->
+<section class="bg-surface-container rounded-xl p-6 border-l-2 border-secondary/20 hover:bg-surface-container-high transition-colors flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+<h2 class="text-xl font-bold uppercase tracking-tight">Join Challenge</h2>
+</div>
+<div class="space-y-4">
+<div class="space-y-1">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Enter Room Code</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-lg focus:ring-2 focus:ring-secondary text-on-surface text-center text-2xl font-mono tracking-widest placeholder:text-outline-variant p-4" placeholder="XJ7-90K" type="text"/>
+</div>
+</div>
+</div>
+<button class="w-full mt-8 bg-surface-container-highest border border-outline-variant/30 text-on-surface font-headline font-bold py-4 rounded-xl uppercase tracking-widest hover:bg-surface-variant transition-colors">
+                    Join Room
+                </button>
+</section>
+<!-- Section 4: Active Challenge Status (Promoted for visibility) -->
+<section class="md:col-span-2 bg-surface-container-lowest border border-primary/10 rounded-xl overflow-hidden flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/3 h-48 md:h-auto">
+<img class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-500" data-alt="abstract digital connection lines and data nodes in bright green neon on black background representing a network matrix" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMWq2WQ_RvK6pTbzHCSEHw7t8urQEL1lMSi5Q-eqI6LLEQwYGURDZKc7DN__1ljoShayytEPtuDJnl02CO5rUsngGJxcbG3Ytu471kxdDVG7kDSVQpiPP9CR7wTWqPd2ELqxg7hsD1oOAHFgscMZZ26GjTO5cPeA4Wr6AEwCjSo_DGVchEnBfUWHxzAAw05GF4VAxLqwWbpDLj8VlnN5jwkjm43GDUV6oVBKPB_TYHB2wGVDDnP6ye5akMfLAGMctYu-Fk8BZ1CnQ"/>
+</div>
+<div class="flex-1 p-8 w-full">
+<div class="flex justify-between items-start mb-4">
+<div>
+<span class="text-primary-container text-[10px] font-bold uppercase tracking-[0.2em] mb-1 block">Active Now</span>
+<h2 class="text-3xl font-black uppercase tracking-tight">Neon Nexus</h2>
+</div>
+<div class="bg-surface-container-highest px-4 py-2 rounded-lg border-l-2 border-secondary">
+<span class="text-secondary font-bold text-sm uppercase">Medium</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">timer</span>
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase">Time Left</p>
+<p class="text-2xl font-headline font-bold text-primary">14:59</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-outline">group</span>
+<div>
+<p class="text-[10px] text-on-surface-variant uppercase">Participants</p>
+<p class="text-2xl font-headline font-bold">5</p>
+</div>
+</div>
+<button class="md:col-span-1 col-span-2 bg-primary/10 text-primary border border-primary/20 hover:bg-primary/20 px-6 py-3 rounded-lg font-bold uppercase tracking-widest text-sm transition-all">
+                            View Mission
+                        </button>
+</div>
+</div>
+</section>
+<!-- Section 3: Live Leaderboard -->
+<section class="md:col-span-2 bg-surface-container rounded-xl p-6">
+<div class="flex items-center justify-between mb-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">leaderboard</span>
+<h2 class="text-xl font-bold uppercase tracking-tight">Live Leaderboard</h2>
+</div>
+<span class="text-xs text-on-surface-variant font-mono">LIVE_UPDATE: 0.02s</span>
+</div>
+<div class="space-y-3">
+<!-- Rank 1 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl group hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-4">
+<span class="w-8 text-2xl font-headline font-black text-secondary">1</span>
+<img alt="User1" class="w-10 h-10 rounded-full" data-alt="minimalist 3d character avatar profile icon on vibrant colored circular background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM4-9yEPZS7g-A_b_j2I7txgPpHKdU_kmcI7GPvDgWB0XCxcpPy865oiq5SC-60rC9WuaZkbD07jBmD5DH2x024F4xTmciDBz_HF0Y29wFrxuVTr0mNYKQ5CXQG9B5pUMAmHVU4K_MW7cf7YuxD_NX_slWiqbOx4qsOGKXRtkg8iex8sivkcqT2K2p2m-c-hqqXo13dzpTOb9ZL0NYX2B4Wqxt0KVVHEEaEDG-tXPZFzI5JZXR_T7g74plBRH5k05LeZRuv_M1UbQ"/>
+<span class="font-bold text-on-surface">User1</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-2xl font-headline font-bold">120</span>
+<span class="text-[10px] text-on-surface-variant uppercase">pts</span>
+</div>
+</div>
+<!-- Rank 2 -->
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl group hover:bg-surface-container-high transition-all">
+<div class="flex items-center gap-4">
+<span class="w-8 text-2xl font-headline font-black text-slate-500">2</span>
+<img alt="User2" class="w-10 h-10 rounded-full" data-alt="minimalist 3d character avatar profile icon on vibrant colored circular background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASHbtsjizVzRy64UvktgHAA9gE-Kj9yUtDcjovW0qXTYmRYX1RZX9Ep1mzLlhAiXQ6HYC0u2OSx-X9VYr4il6GLFtEZ1yG3p06CaEAbUyka6A8RiVSgHiy12-6vxYqFr-cXUlfoMkR4jZ_L3CYtMQ3K7aJJp-li7wZ9xb3MtlibqwbWtbuFACaQ8d6mz2gxo97M4a6v-y0DKklgZHCZqWNI3r7fMK7NefyBwIabcN3Bb8BJtyzqgUtbdhnD2DhEJljGriV4fKCFPo"/>
+<span class="font-bold text-on-surface">User2</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-2xl font-headline font-bold">100</span>
+<span class="text-[10px] text-on-surface-variant uppercase">pts</span>
+</div>
+</div>
+<!-- You -->
+<div class="flex items-center justify-between p-4 bg-primary/10 border border-primary/30 rounded-xl relative overflow-hidden">
+<div class="absolute left-0 top-0 h-full w-1 bg-primary"></div>
+<div class="flex items-center gap-4">
+<span class="w-8 text-2xl font-headline font-black text-primary">3</span>
+<img alt="You" class="w-10 h-10 rounded-full border-2 border-primary" data-alt="minimalist 3d character avatar profile icon on vibrant colored circular background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPTgN4dpa6SOzVcoTvZZrj4WktisJB38BiJPFwR-aJirxyF3d1SVZqyhXgfzfAT_UoOvM0_fMl1r9TXaWNReH-5arla28tIKJg-POVAEhbiwuauOWC_FyQ4tI9ivIFRrF2ZWLwV21Enp_QnlPCVQq8zTNGkLm2UoslLJ2u2SApQWw6FFOoNT0xwEwzcd4aQpdYrM3abJMss7wKSjdko73nQlWl9LvsdSDw51pHOlEa4hn9B0NfUxrup9zUmXxdNpbTjKzG7ihymm8"/>
+<span class="font-bold text-primary flex items-center gap-2">You <span class="bg-primary text-on-primary text-[8px] px-1 rounded">PLAYER</span></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-2xl font-headline font-bold text-primary">80</span>
+<span class="text-[10px] text-primary/70 uppercase">pts</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-[#131313]/90 backdrop-blur-xl border-t border-[#484847]/15 shadow-[0_-4px_20px_rgba(0,0,0,0.4)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-500 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Inter'] text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">bolt</span>
+<span class="font-['Inter'] text-[10px] font-medium">Missions</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-['Inter'] text-[10px] font-medium">Jobs</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#00FF9C] bg-[#00FF9C]/10 rounded-xl px-3 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">diversity_3</span>
+<span class="font-['Inter'] text-[10px] font-medium">Social</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-['Inter'] text-[10px] font-medium">Stats</span>
+</a>
+</nav>
+</body></html>
